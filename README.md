@@ -7,7 +7,7 @@ Ce site présente mes compétences, mes projets et mon parcours en tant qu'ingé
 
 ## Lien vers le site en ligne
 
-[Accéder au portfolio en ligne](https://fadichou.github.io/portfolio)
+[Accéder au portfolio en ligne](https://amarfatou.github.io/portfolio)
 
 ## Technologies utilisées
 
