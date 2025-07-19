@@ -4,98 +4,199 @@
 #skills,
 #portfolio,
 #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
+  margin-top: 4rem;
+  padding-top: 4rem;
 }
 #about h2,
 #skills h2,
 #portfolio h2,
 #contact h2 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+#about ul li {
+  color: #ffffff !important;
 }
 #contact {
-    padding-bottom: 4rem;
+  padding-bottom: 4rem;
+}
+
+.form-label {
+  color: #ffffff;
 }
 
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #5b5b5b;
+  background-color: #5b5b5b;
 }
-
+/* navbar visible et accessible */
+.navbar {
+  background-color: #000000d0; /* noir semi-transparent pour bon contraste */
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
 /* hero background image */
 .bgimage {
-    height: 100vh;
-    max-height: 900px;
-    background: url("images/image1.jpg");
-    background-size: cover;
-    position: relative;
+  height: 100vh;
+  max-height: 600px;
+  /*background: url("images/image1.jpg");*/
+  background-color: #084298; /* Couleur foncée élégante */
+  background-size: cover;
+  position: relative;
 }
 /* text css above hero image*/
 .hero_title {
-    font-size: 4.5rem;
+  font-size: 4.5rem;
 }
 .hero_desc {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 /* about */
 .imageAboutPage {
-    width: 100%;
+  width: 100%;
 }
 .imageAboutPage {
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* skills */
 .skillsText.card {
-    height: 350px;
-    cursor: pointer;
+  height: 350px;
+  cursor: pointer;
 }
 .skillsText img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
 }
 #skills p {
-    text-align: center;
+  text-align: center;
+  color: #084298;
 }
 .skillsIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
 }
 .card-title {
-    text-align: center;
+  text-align: center;
+  color: #084298;
 }
 .card:hover .skillsIcon {
-    color: #008000;
+  color: #008000;
 }
 .skillsText:hover {
-    border: 1px solid #008000;
+  border: 1px solid #008000;
 }
 
 /* portfolio */
 #portfolio p {
-    text-align: center;
+  text-align: center;
+  color: rgb(5, 35, 133);
 }
 
 /* contact */
 .contactColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contactColumn i {
-    color: #198754;
+  color: #198754;
 }
 
 /* footer */
+/******* THEME PROFESSIONNEL – FOND FONCÉ *******/
+
+/* Corps du site en bleu-gris */
+body {
+  background-color: #084298 !important;
+  color: #ffffff;
+}
+
+/* Navbar : bleu nuit profond */
+.navbar {
+  background-color: #0d1b2a !important;
+}
+
+/* Liens navbar */
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #198754 !important;
+}
+
+/* Titres généraux */
+h1,
+h2,
+h3,
+h4 {
+  color: #ffffff;
+}
+
+/* Textes classiques */
+p {
+  color: white;
+}
+
+/* Cartes (compétences et projets) */
+.card {
+  background-color: #233142;
+  color: #ffffff;
+  border: 1px solid #198754;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(25, 135, 84, 0.5);
+}
+
+/* Boutons */
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #146c43;
+}
+
+/* Formulaire contact */
+form input,
+form textarea {
+  background-color: #1b263b;
+  border: 1px solid #198754;
+  color: #ffffff;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #d1d1d1;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #198754;
+  box-shadow: 0 0 5px rgba(25, 135, 84, 0.8);
+}
+
+/* Message de confirmation */
+#confirmationMessage {
+  background-color: #198754;
+  color: #fff;
+}

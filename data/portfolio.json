@@ -1,20 +1,50 @@
 [
     {
-        "image": "image1.png",
+        "image": "Riding cities.png",
+        "alt": "Capture du projet Riding cities",
+        "title": "Riding cities",
+        "text": "Création d’une section web à partir d’une maquette Figma pour une association. L'objectif est de concevoir une section accessible à intégrer dans un site existant. Travail effectué: structuration du contenu en HTML sémantique, intégration en CSS, ajout d’interactions simples (hover, liens), respect des bonnes pratiques d’accessibilité",
+        "link": "https://github.com/fadichou/riding-cities",
+        "target": "_blank"
+    },
+    {
+        "image": "Booki.png",
+        "alt": "Capture du projet Booki",
         "title": "Booki",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "text": "Intégration d’un site responsive à partir d’une maquette Figma pour une agence de voyage. Objectif: implémenter une interface responsive avec HTML et CSS. Le travail réalisé : structuration du contenu avec HTML sémantique, la mise en page responsive en CSS, le respect du design Figma fourni et la compatibilité avec plusieurs appareils",
+        "link": "https://github.com/fadichou/booki-starter-code",
+        "target": "_blank"
     },
     {
-        "image": "image2.png",
-        "title": "Mon Vieux grimoire",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "image": "Print it.png",
+        "alt": "Capture du projet Print it",
+        "title": "Print it",
+        "text": "Développement d’un carrousel interactif en utilisant les fondamentaux de JavaScript. L'objectif est de rendre l’interface dynamique et accessible sans dépendance externe. Travail réalisé: manipulation du DOM en JavaScript natif,gestion des événements utilisateur (clics, clavier) et conditions de navigation et transitions fluides",
+        "link": "https://github.com/fadichou/PROJET_PRINT_P6",
+        "target": "_blank"
     },
     {
-        "image": "image3.png",
+        "image": "Kasa.png",
+        "alt": "Capture du projet Kasa",
         "title": "Kasa",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "text": "Développement d’une application de location immobilière avec React. Objectif: configurer la navigation entre les pages de l'application avec React Router. Travail effectué: création de composants réutilisables, mise en place du routage et des appels API, ajout d’animations CSS pour améliorer l’expérience utilisateur",
+        "link": "https://github.com/fadichou/kasa-frontend",
+        "target": "_blank"
+    },
+    {
+        "image": "Sophie Bluel.png",
+        "alt": "Capture du projet Sophie Bluel",
+        "title": "Sophie Bluel",
+        "text": "Ajout de fonctionnalités dynamiques à un site existant. Objectif: structurer le JavaScript et intégrer des fonctionnalités interactives. Travail réalisé:implémentation d’une galerie et d’une modale admin, Gestion du DOM et des événements, requêtes API pour l’authentification et l’affichage des contenus ",
+        "link": "https://github.com/fadichou/Mon-Portfolio-SophieBluel-FAM",
+        "target": "_blank"
+    },
+    {
+        "image": "Eco Bliss.png",
+        "alt": "Capture du projet Eco Bliss",
+        "title": "Eco Bliss",
+        "text": "Tests automatisés avec Cypress sur un site e-commerce. Objectif : analyser les besoins en automatisation de tests, renforcer la couverture des tests et fournir des livrables exploitables par l’équipe QA. Travail réalisé: automatisation des tests fonctionnels, API et sécurité (XSS), réalisation d'un bilan de campagnes de tests automatisés",
+        "link": "https://github.com/fadichou/Eco-Bliss-Bath-V2",
+        "target": "_blank"
     }
 ]
