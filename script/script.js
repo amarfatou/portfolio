@@ -115,39 +115,3 @@ createPortfolioFromJSON();
 //handleNavbarCollapse();//
 //createSkillsFromJSON();//
 //createPortfolioFromJSON();//
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const confirmationMessage = document.getElementById("confirmationMessage");
-
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          confirmationMessage.classList.remove("d-none");
-          form.reset();
-
-          setTimeout(() => {
-            confirmationMessage.classList.add("d-none");
-          }, 5000);
-        } else {
-          alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
-        }
-      })
-      .catch((error) => {
-        alert("Erreur de réseau. Vérifiez votre connexion.");
-      });
-  });
-});
