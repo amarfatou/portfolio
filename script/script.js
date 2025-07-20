@@ -115,3 +115,116 @@ createPortfolioFromJSON();
 //handleNavbarCollapse();//
 //createSkillsFromJSON();//
 //createPortfolioFromJSON();//
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const messageBox = document.getElementById("confirmationMessage");
+  const submitBtn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const spinner = document.getElementById("spinner");
+
+  // Vérification que les éléments existent
+  if (!form || !messageBox || !submitBtn) {
+    console.error("Éléments du formulaire manquants");
+    return;
+  }
+
+  // Fonction pour afficher les messages
+  function showMessage(text, type) {
+    messageBox.textContent = text;
+    messageBox.className = `alert alert-${type} text-center fw-bold`;
+    messageBox.classList.remove("d-none");
+
+    // Scroll vers le message
+    messageBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    // Masquer après 5 secondes pour les erreurs
+    if (type === "danger") {
+      setTimeout(() => {
+        messageBox.classList.add("d-none");
+      }, 5000);
+    }
+  }
+
+  // Vérifier si on revient avec un paramètre de succès
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("success") === "true") {
+    showMessage(
+      "Votre message a été envoyé avec succès ! Je vous répondrai rapidement.",
+      "success"
+    );
+    // Nettoyer l'URL
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname + "#contact"
+    );
+  }
+
+  // Fonction de validation email
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  // Validation avant soumission
+  form.addEventListener("submit", (e) => {
+    // Détection honeypot (anti-bot)
+    const honeypot = form.querySelector("[name='_honey']");
+    if (honeypot && honeypot.value !== "") {
+      e.preventDefault();
+      showMessage("Formulaire bloqué.", "danger");
+      return;
+    }
+
+    const name = form.querySelector("#name").value.trim();
+    const email = form.querySelector("#email").value.trim();
+    const subject = form.querySelector("#subject").value.trim();
+    const message = form.querySelector("#message").value.trim();
+
+    // Validation des champs
+    if (!name || name.length < 2) {
+      e.preventDefault();
+      showMessage("Le nom doit contenir au moins 2 caractères.", "danger");
+      return;
+    }
+
+    if (!email || !isValidEmail(email)) {
+      e.preventDefault();
+      showMessage("Veuillez entrer une adresse email valide.", "danger");
+      return;
+    }
+
+    if (!subject || subject.length < 3) {
+      e.preventDefault();
+      showMessage("Le sujet doit contenir au moins 3 caractères.", "danger");
+      return;
+    }
+
+    if (!message || message.length < 10) {
+      e.preventDefault();
+      showMessage("Le message doit contenir au moins 10 caractères.", "danger");
+      return;
+    }
+
+    // Validation anti-script
+    const scriptRegex = /<\s*script\b[^>]*>(.*?)<\s*\/\s*script>/gi;
+    const inputs = [name, email, subject, message];
+
+    if (inputs.some((input) => scriptRegex.test(input))) {
+      e.preventDefault();
+      showMessage(
+        "Le contenu du formulaire contient du code interdit.",
+        "danger"
+      );
+      return;
+    }
+
+    // Animation de loading
+    submitBtn.disabled = true;
+    btnText.textContent = "Envoi en cours...";
+    if (spinner) {
+      spinner.classList.remove("d-none");
+    }
+  });
+});

@@ -160,8 +160,11 @@
             <form
               action="https://formsubmit.co/el/jodatu"
               method="POST"
-              id="contactForm"
+              id="contact-form"
             >
+              <!-- Honeypot pour anti-spam -->
+              <input type="text" name="_honey" style="display: none" />
+
               <div class="mb-3">
                 <label for="name" class="form-label">Nom et prénom</label>
                 <input
@@ -170,8 +173,10 @@
                   name="name"
                   id="name"
                   required
+                  minlength="2"
                 />
               </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">Adresse email</label>
                 <input
@@ -182,6 +187,19 @@
                   required
                 />
               </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">Sujet</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="_subject"
+                  id="subject"
+                  placeholder="Sujet de votre message"
+                  required
+                />
+              </div>
+
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
                 <textarea
@@ -190,40 +208,39 @@
                   id="message"
                   rows="6"
                   required
+                  minlength="10"
                 ></textarea>
               </div>
 
-              <!-- Empêche le captcha FormSubmit -->
+              <!-- Configuration FormSubmit -->
               <input type="hidden" name="_captcha" value="false" />
-
-              <!-- Redirige vers la même page avec un paramètre succès -->
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Merci pour votre message ! Je vous répondrai rapidement."
+              />
               <input
                 type="hidden"
                 name="_next"
-                value="https://amarfatou.github.io/portfolio/#confirmationMessage"
+                value="https://amarfatou.github.io/portfolio/?success=true#contact"
               />
 
-              <button type="submit" class="btn btn-success">Envoyer</button>
+              <button type="submit" class="btn btn-success" id="submitBtn">
+                <span id="btnText">Envoyer</span>
+                <span
+                  id="spinner"
+                  class="spinner-border spinner-border-sm d-none ms-2"
+                  role="status"
+                ></span>
+              </button>
             </form>
 
-            <!-- Message de confirmation -->
+            <!-- Messages de confirmation/erreur -->
             <div
               id="confirmationMessage"
-              class="alert alert-success text-center fw-bold d-none mt-3"
+              class="alert d-none mt-3"
               role="alert"
-            >
-              Votre message a bien été envoyé !
-            </div>
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const msg = document.getElementById("confirmationMessage");
-                if (msg && window.location.hash === "#confirmationMessage") {
-                  msg.classList.remove("d-none");
-                } else {
-                  msg.classList.add("d-none");
-                }
-              });
-            </script>
+            ></div>
           </div>
         </div>
       </div>
