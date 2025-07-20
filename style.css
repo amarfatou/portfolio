@@ -24,13 +24,12 @@
   color: #ffffff;
 }
 
-/* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
   background-color: #5b5b5b;
 }
 /* navbar visible et accessible */
 .navbar {
-  background-color: #000000d0; /* noir semi-transparent pour bon contraste */
+  background-color: #000000d0;
 }
 .navbar .nav-link {
   color: #ffffff !important;
@@ -117,7 +116,7 @@
 }
 
 /* footer */
-/******* THEME PROFESSIONNEL – FOND FONCÉ *******/
+/
 
 /* Corps du site en bleu-gris */
 body {
@@ -178,25 +177,26 @@ p {
 /* Formulaire contact */
 form input,
 form textarea {
-  background-color: #1b263b;
-  border: 1px solid #198754;
-  color: #ffffff;
+  background-color: #ffffff !important;
+  border: 2px solid #198754 !important;
+  color: #000000 !important;
 }
 
 form input::placeholder,
 form textarea::placeholder {
-  color: #d1d1d1;
+  color: #666666 !important;
 }
 
 form input:focus,
 form textarea:focus {
-  outline: none;
-  border-color: #198754;
-  box-shadow: 0 0 5px rgba(25, 135, 84, 0.8);
+  outline: none !important;
+  border-color: #198754 !important;
+  box-shadow: 0 0 8px rgba(25, 135, 84, 0.6) !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
-/* ===== AJOUTS POUR LES MESSAGES DE CONFIRMATION ===== */
 
-/* Remplace ton #confirmationMessage existant par ceci : */
+/* Messages de confirmation */
 #confirmationMessage {
   padding: 1rem 1.25rem;
   border-radius: 0.375rem;
@@ -227,7 +227,7 @@ form textarea:focus {
   transform: none;
 }
 
-/* Spinner de chargement (déjà géré par Bootstrap mais on assure) */
+/* Spinner de chargement */
 .spinner-border-sm {
   width: 1rem;
   height: 1rem;
@@ -237,15 +237,6 @@ form textarea:focus {
 /* Assure que la classe d-none fonctionne */
 .d-none {
   display: none !important;
-}
-
-/* Amélioration du focus sur les champs du formulaire */
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #198754 !important;
-  box-shadow: 0 0 8px rgba(25, 135, 84, 0.6) !important;
-  background-color: #233142 !important;
 }
 
 /* Animation douce pour l'apparition des messages */
