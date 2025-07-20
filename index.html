@@ -153,95 +153,40 @@
 
     <!-- contact section-->
     <section id="contact">
-      <div class="container mt-3 contactContent">
-        <h2 class="text-center">Contactez-moi</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <form
-              action="https://formsubmit.co/el/jodatu"
-              method="POST"
-              id="contact-form"
-            >
-              <!-- Honeypot pour anti-spam -->
-              <input type="text" name="_honey" style="display: none" />
+      <div class="contact-container">
+        <h2 class="contact-title">Contactez-moi</h2>
 
-              <div class="mb-3">
-                <label for="name" class="form-label">Nom et prénom</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="name"
-                  id="name"
-                  required
-                  minlength="2"
-                />
-              </div>
+        <div class="contact-grid">
+          <!-- Email -->
+          <a href="mailto:amar.fatou@gmail.com" class="contact-item">
+            <div class="contact-icon icon-email"></div>
+            <div class="contact-label">Adresse email</div>
+            <div class="contact-value">amar.fatou@gmail.com</div>
+          </a>
 
-              <div class="mb-3">
-                <label for="email" class="form-label">Adresse email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  id="email"
-                  required
-                />
-              </div>
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/fatouamarqa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+          >
+            <div class="contact-icon icon-linkedin"></div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">Fatou AMAR</div>
+          </a>
 
-              <div class="mb-3">
-                <label for="subject" class="form-label">Sujet</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="_subject"
-                  id="subject"
-                  placeholder="Sujet de votre message"
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                  class="form-control"
-                  name="message"
-                  id="message"
-                  rows="6"
-                  required
-                  minlength="10"
-                ></textarea>
-              </div>
-
-              <!-- Configuration FormSubmit -->
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_autoresponse"
-                value="Merci pour votre message ! Je vous répondrai rapidement."
-              />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://amarfatou.github.io/portfolio/index.html?success=true#contact"
-              />
-
-              <button type="submit" class="btn btn-success" id="submitBtn">
-                <span id="btnText">Envoyer</span>
-                <span
-                  id="spinner"
-                  class="spinner-border spinner-border-sm d-none ms-2"
-                  role="status"
-                ></span>
-              </button>
-            </form>
-
-            <!-- Messages de confirmation/erreur -->
-            <div
-              id="confirmationMessage"
-              class="alert d-none mt-3"
-              role="alert"
-            ></div>
-          </div>
+          <!-- GitHub -->
+          <a
+            href="https://github.com/amarfatou"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+          >
+            <div class="contact-icon icon-github"></div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">amarfatou</div>
+          </a>
         </div>
       </div>
     </section>
@@ -249,12 +194,6 @@
       <div class="container">
         <p class="mb-1 fw-bold">© 2025 Fatou AMAR | Portfolio QA Engineer</p>
         <p class="mb-1">
-          <a
-            href="mailto:amar.fatou@gmail.com"
-            class="text-white text-decoration-underline"
-            >Me contacter</a
-          >
-          |
           <a
             href="https://www.linkedin.com/in/fatouamarqa"
             target="_blank"

@@ -1,5 +1,20 @@
 /******* GENERAL *******/
 /* spacing on all sections */
+/* Solution de force pour GitHub Pages */
+html {
+  background-color: #084298 !important;
+  background: #084298 !important;
+}
+
+html body {
+  background-color: #084298 !important;
+  background: #084298 !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #about,
 #skills,
 #portfolio,
@@ -105,18 +120,7 @@
   color: rgb(5, 35, 133);
 }
 
-/* contact */
-.contactColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contactColumn i {
-  color: #198754;
-}
-
 /* footer */
-/
 
 /* Corps du site en bleu-gris */
 body {
@@ -173,84 +177,122 @@ p {
 .btn-success:hover {
   background-color: #146c43;
 }
-
-/* Formulaire contact */
-form input,
-form textarea {
-  background-color: #ffffff !important;
-  border: 2px solid #198754 !important;
-  color: #000000 !important;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  color: #666666 !important;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none !important;
-  border-color: #198754 !important;
-  box-shadow: 0 0 8px rgba(25, 135, 84, 0.6) !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Messages de confirmation */
-#confirmationMessage {
-  padding: 1rem 1.25rem;
-  border-radius: 0.375rem;
-  margin-top: 1rem;
-  font-weight: 600;
+/* contact */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   text-align: center;
-  border: 1px solid;
 }
 
-/* Messages de succès */
-.alert-success {
-  background-color: #198754 !important;
-  border-color: #146c43 !important;
-  color: #ffffff !important;
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-/* Messages d'erreur */
-.alert-danger {
-  background-color: #dc3545 !important;
-  border-color: #b02a37 !important;
-  color: #ffffff !important;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Animation pour le bouton lors de l'envoi */
-#submitBtn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(25, 135, 84, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Spinner de chargement */
-.spinner-border-sm {
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.2em;
+.contact-item:hover {
+  transform: translateY(-10px);
+  background-color: rgba(25, 135, 84, 0.2);
+  border-color: #198754;
+  box-shadow: 0 20px 40px rgba(25, 135, 84, 0.3);
+  text-decoration: none;
+  color: #ffffff;
 }
 
-/* Assure que la classe d-none fonctionne */
-.d-none {
-  display: none !important;
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background-color: #198754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-/* Animation douce pour l'apparition des messages */
-#confirmationMessage:not(.d-none) {
-  animation: slideDown 0.3s ease-out;
+.contact-item:hover .contact-icon {
+  background-color: #146c43;
+  transform: scale(1.1);
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+.contact-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  color: #e9ecef;
+  opacity: 0.9;
+}
+
+.icon-email::before {
+  content: "✉";
+}
+.icon-linkedin::before {
+  content: "in";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.icon-github::before {
+  content: "⚡";
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .contact-grid {
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
   }
 }
