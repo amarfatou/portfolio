@@ -1,36 +1,36 @@
 [
   {
-    "image": "html-css.jpg",
+    "image": "html-css.webp",
     "title": "HTML - CSS",
     "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS",
     "alt": "Logo HTML et CSS"
   },
   {
-    "image": "js.jpg",
+    "image": "js.webp",
     "title": "JavaScript",
     "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires",
     "alt": "Logo JavaScript"
   },
   {
-    "image": "react.jpg",
+    "image": "react.webp",
     "title": "React",
     "text": "Création d’applications React, création de composants et manipulation de leur état",
     "alt": "Logo React"
   },
   {
-    "image": "gestion-de-projet.png",
+    "image": "gestion-de-projet.webp",
     "title": "Gestion de projet",
     "text": "Analyse des besoins d’un client, définition d’une solution technique répondant aux besoins fonctionnels, planification du projet",
     "alt": "Icône de gestion de projet"
   },
   {
-    "image": "optimisation-et-debug.png",
+    "image": "optimisation-et-debug.webp",
     "title": "Optimisation et debug",
-    "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et performance et publication d’un site en ligne",
+    "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et publication d’un site en ligne",
     "alt": "Icône optimisation et debug"
   },
   {
-    "image": "test.png",
+    "image": "test.webp",
     "title": "Test",
     "text": "Tests fonctionnels, exploratoires, unitaires et d’intégration. Définition d’une stratégie de test, rédaction d’un cahier de tests, automatisation tests E2E et d’API",
     "alt": "Icône test logiciel"
